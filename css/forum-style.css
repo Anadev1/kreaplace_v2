@@ -1,0 +1,324 @@
+.mp-middlepart {
+    height: auto;
+}
+
+input:focus {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+/*banner*/
+
+
+.banner_container {
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(0, 0.5, 0, 0.5),
+            rgba(0, 0, 0, 0.3)),
+        url(../media/forumintro.jpg);
+    background-position: center;
+    background-size: 100%;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 10vh;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 50px;
+
+
+}
+
+
+
+
+.mp-header {
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    font-size: 4em;
+    /*    color: #353535;*/
+    color: #f4f4f4;
+}
+
+.mp-intro {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    /*    margin: 40px auto 100px;*/
+    margin: 20px auto 50px;
+    font-weight: 100;
+    width: 30%;
+    text-align: center;
+    line-height: 30px;
+    /*    color: #353535;*/
+    color: #f4f4f4;
+    font-size: 1.1em;
+}
+
+
+/*side navigation*/
+.mp-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    height: 100vh;
+    position: sticky;
+    float: left;
+    top: 10px;
+}
+
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "sans-serif";
+}
+
+/*forum*/
+.forum-middlepart {
+    height: auto;
+}
+
+/*side navigation*/
+.forum-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 300px;
+    height: auto;
+    position: sticky;
+    float: left;
+    top: 30px;
+    margin-top: 30px;
+
+}
+
+.forum-nav-el {
+    font-family: 'Amatic SC', cursive;
+    color: #353535;
+    text-decoration: none;
+    font-size: 2.5em;
+    margin: 10px auto;
+
+
+}
+
+/* menu highlighter */
+/* source: https://stackoverflow.com/questions/32902163/line-through-animation-when-hovered */
+
+.forum-nav-el::after {
+    content: ' ';
+    position: absolute;
+    transform: translateY(50%);
+    width: 50px;
+    left: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.25s ease-in-out;
+    color: #22BEBE;
+    margin-top: 8%;
+}
+
+.forum-nav-el:hover::after {
+    width: 100%;
+}
+
+/*searchbar*/
+.forum-searchbar {
+    width: 250px;
+    margin: 0 3vw 10px 3vw;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+.forum-search-type {
+    width: 250px;
+    height: 50px;
+    margin: 0;
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Amatic SC', cursive;
+    color: #353535;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.forum-search-btn {
+    width: 5vw;
+    height: 50px;
+    margin: 0;
+    border: none;
+    background: #228E8E;
+    border-radius: 10px;
+    font-family: 'Amatic SC', cursive;
+    color: #f4f4f4;
+    font-size: 2em;
+    padding: 5px;
+    position: absolute;
+}
+
+/*forum posts*/
+
+.forum-content {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.forum-post {
+    border: 1px solid lightgray;
+    border-radius: 1vw;
+    margin: 30px auto;
+    padding: 0 20px 20px 20px;
+    max-width: 60vw;
+    display: flex;
+    flex-direction: row;
+    background-color: #f4f4f4;
+
+
+}
+
+.forum-question {
+    font-family: 'Roboto', sans-serif;
+    color: #353535;
+    font-weight: 100;
+    margin: 30px 0 20px 0;
+    line-height: 25px;
+}
+
+.forum-answers {
+    font-family: 'Amatic SC', cursive;
+    color: #353535;
+    font-size: 20px;
+    align-self: flex-start;
+    border: none;
+    background: #f4f4f4;
+
+}
+
+.forum-answers:hover {
+    color: #22BEBE;
+}
+
+
+
+.forum-img {
+    max-width: 30%;
+    float: right;
+    margin: 2vw 1vw 2vw 0;
+}
+
+.forum-img-container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.profile_image {
+    width: 5vw;
+
+}
+
+.profile_name {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 1.5vw;
+    color: #353535;
+    font-weight: 200;
+}
+
+/*user profile section*/
+
+.profile_container {
+    margin: 2vw 2vw 1vw 1vw;
+    width: 10vw;
+    text-align: center;
+}
+
+.answers_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.post_box {
+    display: flex;
+    flex-direction: row;
+}
+
+/*answer section*/
+/* read more - source: https://www.w3schools.com/howto/howto_js_read_more.asp */
+
+#more {
+    display: none;
+    padding: 2vw 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+}
+
+#more1 {
+    display: none;
+    padding: 2vw 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+}
+
+#more2 {
+    display: none;
+    padding: 2vw 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+}
+
+.answer {
+    padding: 1vw 0 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+}
+
+.answer_profile {
+    width: 4vw;
+    padding: 0 1vw 0 0;
+}
+
+.post_container {
+    margin: 0 2vw 1vw 0;
+}
+
+.addanswer_container {
+    padding: 1vw 0 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+}
+
+.add_answer {
+    width: 100%;
+    height: 3vw;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    padding: 1vw 0.5vw;
+    border-radius: 0.5vw;
+    color: #353535;
+}
+
+
+.bookmark-container {
+    position: absolute;
+    right: 12.3vw;
+    height: auto;
+    width: 2vw;
+    cursor: pointer;
+}

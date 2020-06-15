@@ -1,0 +1,94 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "sans-serif";
+}
+
+button:focus {
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+/*banner*/
+
+.banner_container {
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(0, 0.5, 0, 0.5),
+            rgba(0, 0, 0, 0.0)),
+        url(../media/banners/b20.jpg);
+    background-size: 100%;
+    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 10%;
+}
+
+.banner_headline {
+    font-family: "Amatic SC";
+    font-size: 4vw;
+    color: #F4F4F4;
+    position: relative;
+    margin: -3vw auto 2vw auto;
+}
+
+.banner_text {
+    font-family: "Roboto";
+    font-weight: normal;
+    font-size: 1.5vw;
+    color: #F4F4F4;
+    position: relative;
+    font-weight: 100;
+}
+
+/*article section*/
+
+.section_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+#about_article {
+    margin: 5vw 15vw;
+    text-align: justify;
+}
+
+.about_text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 1.3vw;
+    color: #353535;
+    line-height: 2.5vw;
+    width: 60vw;
+    margin: 0 2vw;
+}
+
+.about_image {
+    width: 35vw;
+    margin: 5vw 1vw;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5vw;
+}
+
+#section1 {
+    animation: fadein 3s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

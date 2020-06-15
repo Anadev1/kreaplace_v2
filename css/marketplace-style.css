@@ -1,0 +1,236 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "sans-serif";
+}
+
+input:focus {
+    outline: none;
+}
+
+/*MARKETPLACE*/
+/*title and description*/
+.mp-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner_container {
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(0, 0.5, 0, 0.5),
+            rgba(0, 0, 0, 0.3)),
+        url(../media/banners/b17.jpg);
+    background-size: 100%;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 100px;
+    background-position: center;
+}
+
+
+
+
+.mp-header {
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    margin: 10vh auto 0 auto;
+    font-size: 4em;
+    /*    color: #353535;*/
+    color: #f4f4f4;
+}
+
+.mp-intro {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    /*    margin: 40px auto 100px;*/
+    margin: 20px auto 50px;
+    font-weight: 100;
+    width: 30%;
+    text-align: center;
+    line-height: 30px;
+    /*    color: #353535;*/
+    color: #f4f4f4;
+    font-size: 1.1em;
+}
+
+.mp-middlepart {
+    height: auto;
+}
+
+/*side navigation*/
+.mp-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20vw;
+    height: auto;
+    position: sticky;
+    float: left;
+    top: 30px;
+
+
+}
+
+.mp-nav-el {
+    font-family: 'Amatic SC', cursive;
+    color: #353535;
+    text-decoration: none;
+    font-size: 2.5em;
+    margin: 10px auto;
+
+
+}
+
+/* menu highlighter */
+/* source: https://stackoverflow.com/questions/32902163/line-through-animation-when-hovered */
+
+.mp-nav-el::after {
+    content: ' ';
+    position: absolute;
+    transform: translateY(50%);
+    width: 50px;
+    left: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.25s ease-in-out;
+    color: #22BEBE;
+    margin-top: 8%;
+}
+
+.mp-nav-el:hover::after {
+    width: 100%;
+}
+
+/*searchbar*/
+.mp-searchbar {
+    width: 15vw;
+    margin: 0 3vw 10px 3vw;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 10px;
+
+
+}
+
+.mp-search-type {
+    width: 15vw;
+    height: 50px;
+    margin: auto;
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Amatic SC', cursive;
+    color: #353535;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.mp-search-btn {
+    width: 5vw;
+    height: 50px;
+    margin: 0;
+    border: none;
+    background: #228E8E;
+    border-radius: 10px;
+    font-family: 'Amatic SC', cursive;
+    color: #f4f4f4;
+    font-size: 2em;
+    padding: 5px;
+    position: absolute;
+}
+
+
+/*gallery*/
+.mp-gallery {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    object-fit: contain;
+    width: 60vw;
+    margin: auto auto auto 30vw;
+    height: auto;
+    grid-column-gap: 5vw;
+    grid-row-gap: 5vw;
+}
+
+.mp-img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* images overlay */
+
+.image-container {
+    text-align: center;
+    position: relative;
+    width: 15vw;
+}
+
+.image-content {
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+    bottom: 0;
+    color: #f4f4f4;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 4px;
+}
+
+.image-title {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 5vh;
+}
+
+.image-price {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 3vh;
+}
+
+.image-container:hover .image-content {
+    visibility: visible;
+    animation: showup 0.2s;
+    transition: ease-out;
+}
+
+@keyframes showup {
+    0% {
+        opacity: 0%;
+    }
+
+    25% {
+        opacity: 25%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    75% {
+        opacity: 75%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+
+.bookmark-container {
+    position: absolute;
+    right: 0.8vw;
+    height: 5vh;
+    width: 2vw;
+    cursor: pointer;
+}
