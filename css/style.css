@@ -165,3 +165,17 @@ footer p {
 .nav-link:hover::after {
     width: 100%;
 }
+
+@media only screen and (max-width: 500px) {
+    nav {
+        display: none;
+    }
+
+    #plusprofile {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+}
